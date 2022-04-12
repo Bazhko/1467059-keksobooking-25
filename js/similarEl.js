@@ -1,7 +1,7 @@
 import {newObject} from '/js/data.js';
 
-const similarNotices = Array.from({length: 1}, newObject);
-const noticeWindow = document.querySelector('.map__canvas');
+const similarNotices = Array.from({length: 10}, newObject);
+const mapCanvas = document.querySelector('.map__canvas');
 const noticeCardTemplate = document.querySelector('#card')
   .content
   .querySelector('.popup');
@@ -118,7 +118,9 @@ const generateNoticeTemplate = ({author, offer}, template) => {
   return noticeCardEl;
 };
 
-similarNotices.forEach((notice) => {
-  const template = generateNoticeTemplate(notice, noticeCardTemplate);
-  noticeWindow.append(template);
-});
+// similarNotices.forEach((notice) => {
+//   const template = generateNoticeTemplate(notice, noticeCardTemplate);
+//   noticeWindow.append(template);
+// });
+
+export {similarNotices};
